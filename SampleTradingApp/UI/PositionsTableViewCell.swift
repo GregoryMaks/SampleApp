@@ -18,7 +18,7 @@ final class PositionsTableViewCell: UITableViewCell {
     private var cellStackView: UIStackView!
     private var contentStackView: UIStackView!
     private var marketDescriptionLabel: UILabel!
-    private var netWorthLabel: UILabel!
+    private var netPriceLabel: UILabel!
     private var profitAndLossLabel: UILabel!
     private var buyAndSellLabel: UILabel!
     private var workingBuyAndSellLabel: UILabel!
@@ -44,12 +44,12 @@ private extension PositionsTableViewCell {
         marketDescriptionLabel = .makeGenericLabel()
         marketDescriptionLabel.textAlignment = .left
 
-        netWorthLabel = .makeGenericLabel()
+        netPriceLabel = .makeGenericLabel()
         profitAndLossLabel = .makeGenericLabel()
         buyAndSellLabel = .makeGenericLabel()
         workingBuyAndSellLabel = .makeGenericLabel()
 
-        contentStackView = UIStackView(arrangedSubviews: [netWorthLabel, profitAndLossLabel, buyAndSellLabel, workingBuyAndSellLabel])
+        contentStackView = UIStackView(arrangedSubviews: [netPriceLabel, profitAndLossLabel, buyAndSellLabel, workingBuyAndSellLabel])
         contentStackView.translatesAutoresizingMaskIntoConstraints = false
         contentStackView.alignment = .center
         contentStackView.axis = .horizontal
@@ -75,7 +75,7 @@ private extension PositionsTableViewCell {
     func updateContent() {
         // TODO: color labels according to content
         marketDescriptionLabel.text = viewModel?.marketDescription
-        netWorthLabel.text = viewModel?.netWorth
+        netPriceLabel.text = viewModel?.netPrice
         profitAndLossLabel.text = viewModel?.profitAndLoss
         buyAndSellLabel.text = viewModel?.buyAndSell
         workingBuyAndSellLabel.text = viewModel?.workingBuyAndSell
@@ -112,7 +112,7 @@ struct PositionsTableViewCellWrapper: UIViewRepresentable {
 struct PositionsTableViewCell_Previews: PreviewProvider {
 
     static let viewModels: [PositionsTableViewCellViewModel] = [
-        PositionsTableViewCellViewModel(marketDescription: "ZC DEC21", netWorth: "6", profitAndLoss: "5,588", buyAndSell: "6-0", workingBuyAndSell: "0-0")
+        PositionsTableViewCellViewModel(marketDescription: "ZC DEC21", netPrice: "6", profitAndLoss: "5,588", buyAndSell: "6-0", workingBuyAndSell: "0-0")
     ]
 
     static var previews: some View {

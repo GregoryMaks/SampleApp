@@ -10,8 +10,11 @@
 		932F4AED27385BAB00ED9781 /* PositionsListSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4AEC27385BAB00ED9781 /* PositionsListSectionHeaderView.swift */; };
 		932F4AFD27386AC800ED9781 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4AFC27386AC800ED9781 /* AppCoordinator.swift */; };
 		932F4AFF27386CF400ED9781 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4AFE27386CF400ED9781 /* SceneDelegate.swift */; };
+		932F4B012738750600ED9781 /* positions.json in Resources */ = {isa = PBXBuildFile; fileRef = 932F4B002738750600ED9781 /* positions.json */; };
+		932F4B052738789B00ED9781 /* PositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4B042738789B00ED9781 /* PositionModel.swift */; };
+		932F4B092738796800ED9781 /* PositionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4B082738796800ED9781 /* PositionsService.swift */; };
 		93915B512738339800DE8AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B502738339800DE8AB1 /* AppDelegate.swift */; };
-		93915B552738339800DE8AB1 /* PositionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B542738339800DE8AB1 /* PositionsViewController.swift */; };
+		93915B552738339800DE8AB1 /* PositionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B542738339800DE8AB1 /* PositionsListViewController.swift */; };
 		93915B5A2738339A00DE8AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93915B592738339A00DE8AB1 /* Assets.xcassets */; };
 		93915B5D2738339A00DE8AB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93915B5B2738339A00DE8AB1 /* LaunchScreen.storyboard */; };
 		93915B682738339A00DE8AB1 /* SampleTradingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B672738339A00DE8AB1 /* SampleTradingAppTests.swift */; };
@@ -47,9 +50,12 @@
 		932F4AEC27385BAB00ED9781 /* PositionsListSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsListSectionHeaderView.swift; sourceTree = "<group>"; };
 		932F4AFC27386AC800ED9781 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		932F4AFE27386CF400ED9781 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		932F4B002738750600ED9781 /* positions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = positions.json; sourceTree = "<group>"; };
+		932F4B042738789B00ED9781 /* PositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModel.swift; sourceTree = "<group>"; };
+		932F4B082738796800ED9781 /* PositionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsService.swift; sourceTree = "<group>"; };
 		93915B4D2738339800DE8AB1 /* SampleTradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleTradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93915B502738339800DE8AB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93915B542738339800DE8AB1 /* PositionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsViewController.swift; sourceTree = "<group>"; };
+		93915B542738339800DE8AB1 /* PositionsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsListViewController.swift; sourceTree = "<group>"; };
 		93915B592738339A00DE8AB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93915B5C2738339A00DE8AB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93915B5E2738339A00DE8AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +98,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		932F4B022738776300ED9781 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				93915B542738339800DE8AB1 /* PositionsListViewController.swift */,
+				93915B9B27384F8800DE8AB1 /* PositionsListViewModel.swift */,
+				93915B80273839B200DE8AB1 /* PositionsHeaderView.swift */,
+				93915B82273839D100DE8AB1 /* PositionsHeaderViewModel.swift */,
+				932F4AEC27385BAB00ED9781 /* PositionsListSectionHeaderView.swift */,
+				93915B972738479800DE8AB1 /* PositionsTableViewCell.swift */,
+				93915B99273847B900DE8AB1 /* PositionsTableViewCellViewModel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		932F4B032738788900ED9781 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				932F4B042738789B00ED9781 /* PositionModel.swift */,
+				932F4B082738796800ED9781 /* PositionsService.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		93915B442738339800DE8AB1 = {
 			isa = PBXGroup;
 			children = (
@@ -115,20 +144,16 @@
 		93915B4F2738339800DE8AB1 /* SampleTradingApp */ = {
 			isa = PBXGroup;
 			children = (
+				932F4B022738776300ED9781 /* UI */,
+				932F4B032738788900ED9781 /* Logic */,
 				93915B92273840F800DE8AB1 /* Helpers */,
 				93915B502738339800DE8AB1 /* AppDelegate.swift */,
 				932F4AFE27386CF400ED9781 /* SceneDelegate.swift */,
 				932F4AFC27386AC800ED9781 /* AppCoordinator.swift */,
-				93915B542738339800DE8AB1 /* PositionsViewController.swift */,
 				93915B592738339A00DE8AB1 /* Assets.xcassets */,
 				93915B5B2738339A00DE8AB1 /* LaunchScreen.storyboard */,
 				93915B5E2738339A00DE8AB1 /* Info.plist */,
-				93915B80273839B200DE8AB1 /* PositionsHeaderView.swift */,
-				93915B82273839D100DE8AB1 /* PositionsHeaderViewModel.swift */,
-				932F4AEC27385BAB00ED9781 /* PositionsListSectionHeaderView.swift */,
-				93915B972738479800DE8AB1 /* PositionsTableViewCell.swift */,
-				93915B99273847B900DE8AB1 /* PositionsTableViewCellViewModel.swift */,
-				93915B9B27384F8800DE8AB1 /* PositionsListViewModel.swift */,
+				932F4B002738750600ED9781 /* positions.json */,
 				93915B95273842F700DE8AB1 /* Localizable.strings */,
 			);
 			path = SampleTradingApp;
@@ -265,6 +290,7 @@
 			files = (
 				93915B5D2738339A00DE8AB1 /* LaunchScreen.storyboard in Resources */,
 				93915B96273842F700DE8AB1 /* Localizable.strings in Resources */,
+				932F4B012738750600ED9781 /* positions.json in Resources */,
 				93915B5A2738339A00DE8AB1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,10 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				932F4B092738796800ED9781 /* PositionsService.swift in Sources */,
+				932F4B052738789B00ED9781 /* PositionModel.swift in Sources */,
 				932F4AFD27386AC800ED9781 /* AppCoordinator.swift in Sources */,
 				932F4AED27385BAB00ED9781 /* PositionsListSectionHeaderView.swift in Sources */,
 				93915B81273839B200DE8AB1 /* PositionsHeaderView.swift in Sources */,
-				93915B552738339800DE8AB1 /* PositionsViewController.swift in Sources */,
+				93915B552738339800DE8AB1 /* PositionsListViewController.swift in Sources */,
 				93915B9C27384F8800DE8AB1 /* PositionsListViewModel.swift in Sources */,
 				93915B942738410400DE8AB1 /* Localization.swift in Sources */,
 				93915B512738339800DE8AB1 /* AppDelegate.swift in Sources */,

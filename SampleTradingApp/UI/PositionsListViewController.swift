@@ -1,5 +1,5 @@
 //
-//  PositionsViewController.swift
+//  PositionsListViewController.swift
 //  SampleTradingApp
 //
 //  Created by Gregory Maksiuk on 07.11.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class PositionsViewController: UIViewController {
+final class PositionsListViewController: UIViewController {
 
     private static let cellIdentifier = "positionsList.cell"
 
@@ -56,7 +56,7 @@ final class PositionsViewController: UIViewController {
     }
 }
 
-private extension PositionsViewController {
+private extension PositionsListViewController {
 
     func setupHeaderView() {
         // TODO get from self VM
@@ -94,7 +94,7 @@ private extension PositionsViewController {
     }
 }
 
-extension PositionsViewController: UITableViewDataSource {
+extension PositionsListViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         1
@@ -125,12 +125,12 @@ extension PositionsViewController: UITableViewDataSource {
     }
 }
 
-extension PositionsViewController: UITableViewDelegate {
+extension PositionsListViewController: UITableViewDelegate {
 }
 
 // MARK: - Actions
 
-extension PositionsViewController {
+extension PositionsListViewController {
 
     @objc
     func contextMenuButtonClicked(_ sender: Any) {

@@ -10,7 +10,7 @@ import Foundation
 struct PositionsTableViewCellViewModel {
 
     let marketDescription: String
-    let netWorth: String
+    let netPrice: String
     let profitAndLoss: String
     let buyAndSell: String
     let workingBuyAndSell: String
