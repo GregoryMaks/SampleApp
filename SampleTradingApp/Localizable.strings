@@ -6,5 +6,12 @@
   
 */
 
+"positionList.header" = "All Positions";
+
 "positionsHeader.profitAndLossLabel" = "P&L:";
 "positionsHeader.cashLabel" = "Cash:";
+
+"positionsSectionHeader.netPriceLabel" = "Net";
+"positionsSectionHeader.profitAndLossLabel" = "P&L";
+"positionsSectionHeader.buyAndSellLabel" = "Buy/Sell";
+"positionsSectionHeader.workingBuyAndSellLabel" = "Working";

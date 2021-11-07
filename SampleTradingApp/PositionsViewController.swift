@@ -17,10 +17,11 @@ final class PositionsViewController: UIViewController {
         }
     }
 
+    private var headerView: PositionsHeaderView!
     private var tableView: UITableView!
 
     override var navigationItem: UINavigationItem {
-        let item = UINavigationItem(title: "TODO")
+        let item = UINavigationItem(title: "positionList.header".localized)
         item.rightBarButtonItem = UIBarButtonItem(
             image: .init(systemName: "line.3.horizontal"),
             style: .plain,
@@ -56,11 +57,26 @@ final class PositionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupHeaderView()
         setupTableView()
     }
 }
 
 private extension PositionsViewController {
+
+    func setupHeaderView() {
+        // TODO get from self VM
+        headerView = PositionsHeaderView(viewModel: PositionsHeaderViewModel.sample)
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.frame = .init(origin: .zero, size: headerView.intrinsicContentSize)
+        view.addSubview(headerView)
+        
+        NSLayoutConstraint.activate([
+            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            headerView.topAnchor.constraint(equalTo: view.topAnchor)
+        ])
+    }
 
     func setupTableView() {
         tableView = UITableView(frame: view.bounds, style: .plain)
@@ -72,21 +88,11 @@ private extension PositionsViewController {
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
 
         tableView.register(PositionsTableViewCell.self, forCellReuseIdentifier: Self.cellIdentifier)
-
-        // Header view
-        // TODO get from self VM
-        let headerView = PositionsHeaderView(viewModel: PositionsHeaderViewModel.sample)
-        headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.frame = .init(origin: .zero, size: headerView.intrinsicContentSize)
-        tableView.tableHeaderView = headerView
-        NSLayoutConstraint.activate([
-            headerView.widthAnchor.constraint(equalTo: tableView.widthAnchor)
-        ])
     }
 
     func updateContent() {
@@ -118,6 +124,10 @@ extension PositionsViewController: UITableViewDataSource {
         }
         cell.viewModel = .init(position)
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        PositionsListSectionHeaderView()
     }
 }
 

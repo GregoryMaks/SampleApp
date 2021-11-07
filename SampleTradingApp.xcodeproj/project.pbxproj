@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		932F4AED27385BAB00ED9781 /* PositionsListSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4AEC27385BAB00ED9781 /* PositionsListSectionHeaderView.swift */; };
 		93915B512738339800DE8AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B502738339800DE8AB1 /* AppDelegate.swift */; };
 		93915B532738339800DE8AB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B522738339800DE8AB1 /* SceneDelegate.swift */; };
 		93915B552738339800DE8AB1 /* PositionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B542738339800DE8AB1 /* PositionsViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		932F4AEC27385BAB00ED9781 /* PositionsListSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsListSectionHeaderView.swift; sourceTree = "<group>"; };
 		93915B4D2738339800DE8AB1 /* SampleTradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleTradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93915B502738339800DE8AB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93915B522738339800DE8AB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				93915B5E2738339A00DE8AB1 /* Info.plist */,
 				93915B80273839B200DE8AB1 /* PositionsHeaderView.swift */,
 				93915B82273839D100DE8AB1 /* PositionsHeaderViewModel.swift */,
+				932F4AEC27385BAB00ED9781 /* PositionsListSectionHeaderView.swift */,
 				93915B972738479800DE8AB1 /* PositionsTableViewCell.swift */,
 				93915B99273847B900DE8AB1 /* PositionsTableViewCellViewModel.swift */,
 				93915B9B27384F8800DE8AB1 /* PositionsListViewModel.swift */,
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				932F4AED27385BAB00ED9781 /* PositionsListSectionHeaderView.swift in Sources */,
 				93915B81273839B200DE8AB1 /* PositionsHeaderView.swift in Sources */,
 				93915B552738339800DE8AB1 /* PositionsViewController.swift in Sources */,
 				93915B9C27384F8800DE8AB1 /* PositionsListViewModel.swift in Sources */,
