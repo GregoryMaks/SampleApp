@@ -33,14 +33,26 @@ private extension PositionsViewController {
 
     func setupTableView() {
         tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
         view.addSubview(tableView)
+
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+
+        // Header view
+        // TODO get from self VM
+        let headerView = PositionsHeaderView(viewModel: PositionsHeaderViewModel.sample)
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.frame = .init(origin: .zero, size: headerView.intrinsicContentSize)
+        tableView.tableHeaderView = headerView
+        NSLayoutConstraint.activate([
+            headerView.widthAnchor.constraint(equalTo: tableView.widthAnchor)
         ])
     }
 }

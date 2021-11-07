@@ -16,6 +16,10 @@
 		93915B682738339A00DE8AB1 /* SampleTradingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B672738339A00DE8AB1 /* SampleTradingAppTests.swift */; };
 		93915B722738339A00DE8AB1 /* SampleTradingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B712738339A00DE8AB1 /* SampleTradingAppUITests.swift */; };
 		93915B742738339A00DE8AB1 /* SampleTradingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B732738339A00DE8AB1 /* SampleTradingAppUITestsLaunchTests.swift */; };
+		93915B81273839B200DE8AB1 /* PositionsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B80273839B200DE8AB1 /* PositionsHeaderView.swift */; };
+		93915B83273839D100DE8AB1 /* PositionsHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B82273839D100DE8AB1 /* PositionsHeaderViewModel.swift */; };
+		93915B942738410400DE8AB1 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B932738410400DE8AB1 /* Localization.swift */; };
+		93915B96273842F700DE8AB1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93915B95273842F700DE8AB1 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		93915B6D2738339A00DE8AB1 /* SampleTradingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleTradingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93915B712738339A00DE8AB1 /* SampleTradingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTradingAppUITests.swift; sourceTree = "<group>"; };
 		93915B732738339A00DE8AB1 /* SampleTradingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTradingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		93915B80273839B200DE8AB1 /* PositionsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsHeaderView.swift; sourceTree = "<group>"; };
+		93915B82273839D100DE8AB1 /* PositionsHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsHeaderViewModel.swift; sourceTree = "<group>"; };
+		93915B932738410400DE8AB1 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		93915B95273842F700DE8AB1 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 		93915B4F2738339800DE8AB1 /* SampleTradingApp */ = {
 			isa = PBXGroup;
 			children = (
+				93915B92273840F800DE8AB1 /* Helpers */,
 				93915B502738339800DE8AB1 /* AppDelegate.swift */,
 				93915B522738339800DE8AB1 /* SceneDelegate.swift */,
 				93915B542738339800DE8AB1 /* PositionsViewController.swift */,
@@ -106,6 +115,9 @@
 				93915B592738339A00DE8AB1 /* Assets.xcassets */,
 				93915B5B2738339A00DE8AB1 /* LaunchScreen.storyboard */,
 				93915B5E2738339A00DE8AB1 /* Info.plist */,
+				93915B80273839B200DE8AB1 /* PositionsHeaderView.swift */,
+				93915B82273839D100DE8AB1 /* PositionsHeaderViewModel.swift */,
+				93915B95273842F700DE8AB1 /* Localizable.strings */,
 			);
 			path = SampleTradingApp;
 			sourceTree = "<group>";
@@ -125,6 +137,14 @@
 				93915B732738339A00DE8AB1 /* SampleTradingAppUITestsLaunchTests.swift */,
 			);
 			path = SampleTradingAppUITests;
+			sourceTree = "<group>";
+		};
+		93915B92273840F800DE8AB1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				93915B932738410400DE8AB1 /* Localization.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93915B5D2738339A00DE8AB1 /* LaunchScreen.storyboard in Resources */,
+				93915B96273842F700DE8AB1 /* Localizable.strings in Resources */,
 				93915B5A2738339A00DE8AB1 /* Assets.xcassets in Resources */,
 				93915B582738339800DE8AB1 /* Main.storyboard in Resources */,
 			);
@@ -258,8 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93915B81273839B200DE8AB1 /* PositionsHeaderView.swift in Sources */,
 				93915B552738339800DE8AB1 /* PositionsViewController.swift in Sources */,
+				93915B942738410400DE8AB1 /* Localization.swift in Sources */,
 				93915B512738339800DE8AB1 /* AppDelegate.swift in Sources */,
+				93915B83273839D100DE8AB1 /* PositionsHeaderViewModel.swift in Sources */,
 				93915B532738339800DE8AB1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  SampleTradingApp
+
+  Created by Gregory Maksiuk on 07.11.2021.
+  
+*/
+
+"positionsHeader.profitAndLossLabel" = "P&L:";
+"positionsHeader.cashLabel" = "Cash:";
