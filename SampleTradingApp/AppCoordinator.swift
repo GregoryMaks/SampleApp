@@ -24,7 +24,10 @@ final class AppCoordinator {
         let jsonUrl = URL(fileURLWithPath: jsonPath)
         let viewModel = PositionsListViewModel(positionsService: PositionsService(jsonPath: jsonUrl))
         let viewController = PositionsListViewController(viewModel: viewModel)
+
         navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.navigationBar.backgroundColor = .systemBackground
+
         window.rootViewController = navigationController
     }
 }

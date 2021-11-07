@@ -73,10 +73,11 @@ private extension PositionsTableViewCell {
     }
 
     func updateContent() {
-        // TODO: color labels according to content
         marketDescriptionLabel.text = viewModel?.marketDescription
         netPriceLabel.text = viewModel?.netPrice
+        netPriceLabel.textColor = (viewModel?.netPriceColorStyle).map { UIColor.color(for: $0) } ?? .darkText
         profitAndLossLabel.text = viewModel?.profitAndLoss
+        profitAndLossLabel.textColor = (viewModel?.profitAndLossColorStyle).map { UIColor.color(for: $0) } ?? .darkText
         buyAndSellLabel.text = viewModel?.buyAndSell
         workingBuyAndSellLabel.text = viewModel?.workingBuyAndSell
     }
@@ -89,6 +90,20 @@ private extension UILabel {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         return label
+    }
+}
+
+private extension UIColor {
+
+    static func color(for colorStyle: PositionsListViewModel.ColorStyle) -> UIColor {
+        switch colorStyle {
+        case .positive:
+            return .systemBlue
+        case .neutral:
+            return .label
+        case .negative:
+            return .systemRed
+        }
     }
 }
 
@@ -112,7 +127,15 @@ struct PositionsTableViewCellWrapper: UIViewRepresentable {
 struct PositionsTableViewCell_Previews: PreviewProvider {
 
     static let viewModels: [PositionsTableViewCellViewModel] = [
-        PositionsTableViewCellViewModel(marketDescription: "ZC DEC21", netPrice: "6", profitAndLoss: "5,588", buyAndSell: "6-0", workingBuyAndSell: "0-0")
+        PositionsTableViewCellViewModel(
+            marketDescription: "ZC DEC21",
+            netPrice: "6",
+            netPriceColorStyle: .positive,
+            profitAndLoss: "5,588",
+            profitAndLossColorStyle: .negative,
+            buyAndSell: "6-0",
+            workingBuyAndSell: "0-0"
+        )
     ]
 
     static var previews: some View {

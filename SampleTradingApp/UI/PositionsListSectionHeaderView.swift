@@ -25,6 +25,15 @@ final class PositionsListSectionHeaderView: UIView {
 private extension PositionsListSectionHeaderView {
 
     func setupContent() {
+        backgroundColor = UIColor { traitCollection in
+            switch traitCollection.userInterfaceStyle {
+            case .dark:
+                return UIColor(white: 0.1, alpha: 1.0)
+            default:
+                return UIColor(white: 0.7, alpha: 1.0)
+            }
+        }
+
         let titles = [
             "positionsSectionHeader.netPriceLabel".localized,
             "positionsSectionHeader.profitAndLossLabel".localized,
@@ -43,16 +52,15 @@ private extension PositionsListSectionHeaderView {
         contentStackView.alignment = .center
         contentStackView.axis = .horizontal
         contentStackView.distribution = .fillEqually
-        contentStackView.backgroundColor = .gray
         addSubview(contentStackView)
 
         NSLayoutConstraint.activate([
             // H
-            contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            contentStackView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
+            contentStackView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor),
             // V
-            contentStackView.topAnchor.constraint(equalTo: topAnchor),
-            contentStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            contentStackView.topAnchor.constraint(equalTo: topAnchor, constant: 4),
+            contentStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4),
         ])
     }
 }

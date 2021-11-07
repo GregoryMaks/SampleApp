@@ -13,6 +13,7 @@
 		932F4B012738750600ED9781 /* positions.json in Resources */ = {isa = PBXBuildFile; fileRef = 932F4B002738750600ED9781 /* positions.json */; };
 		932F4B052738789B00ED9781 /* PositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4B042738789B00ED9781 /* PositionModel.swift */; };
 		932F4B092738796800ED9781 /* PositionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4B082738796800ED9781 /* PositionsService.swift */; };
+		932F4B0E2738914F00ED9781 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932F4B0D2738914F00ED9781 /* ColorScheme.swift */; };
 		93915B512738339800DE8AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B502738339800DE8AB1 /* AppDelegate.swift */; };
 		93915B552738339800DE8AB1 /* PositionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B542738339800DE8AB1 /* PositionsListViewController.swift */; };
 		93915B5A2738339A00DE8AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93915B592738339A00DE8AB1 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		932F4B002738750600ED9781 /* positions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = positions.json; sourceTree = "<group>"; };
 		932F4B042738789B00ED9781 /* PositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModel.swift; sourceTree = "<group>"; };
 		932F4B082738796800ED9781 /* PositionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsService.swift; sourceTree = "<group>"; };
+		932F4B0D2738914F00ED9781 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		93915B4D2738339800DE8AB1 /* SampleTradingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleTradingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93915B502738339800DE8AB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93915B542738339800DE8AB1 /* PositionsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsListViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				93915B932738410400DE8AB1 /* Localization.swift */,
+				932F4B0D2738914F00ED9781 /* ColorScheme.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				93915B942738410400DE8AB1 /* Localization.swift in Sources */,
 				93915B512738339800DE8AB1 /* AppDelegate.swift in Sources */,
 				932F4AFF27386CF400ED9781 /* SceneDelegate.swift in Sources */,
+				932F4B0E2738914F00ED9781 /* ColorScheme.swift in Sources */,
 				93915B982738479800DE8AB1 /* PositionsTableViewCell.swift in Sources */,
 				93915B83273839D100DE8AB1 /* PositionsHeaderViewModel.swift in Sources */,
 				93915B9A273847B900DE8AB1 /* PositionsTableViewCellViewModel.swift in Sources */,

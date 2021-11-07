@@ -50,7 +50,7 @@ final class PositionsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         setupHeaderView()
         setupTableView()
     }
@@ -75,6 +75,8 @@ private extension PositionsListViewController {
     func setupTableView() {
         tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.sectionHeaderTopPadding = 0
+        tableView.bounces = false
         tableView.delegate = self
         tableView.dataSource = self
         view.addSubview(tableView)
@@ -123,9 +125,16 @@ extension PositionsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         PositionsListSectionHeaderView()
     }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        .leastNormalMagnitude
+    }
 }
 
 extension PositionsListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
 }
 
 // MARK: - Actions
