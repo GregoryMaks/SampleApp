@@ -11,14 +11,27 @@ class PositionsListViewModel {
 
     let positions: [Position]
 
+    private var positionModels: [PositionModel] = []
     private let positionsService: PositionsServiceProtocol
 
     init(positionsService: PositionsServiceProtocol) {
         self.positionsService = positionsService
 
-        positions = positionsService.allPositions().map {
+        positionModels = positionsService.allPositions()
+        positions = positionModels.map {
             .init($0)
         }
+    }
+
+    var headerViewModel: PositionsHeaderViewModel {
+        let summaryProfitAndLoss = positionModels.reduce(0) { $0 + $1.PL }
+        return PositionsHeaderViewModel(
+            tradingSessionName: "demo0001",
+            profitAndLoss: "\(summaryProfitAndLoss)",
+            profitAndLossColorStyle: .init(for: summaryProfitAndLoss),
+            cash: "-85,521",
+            cashColorStyle: .negative
+        )
     }
 }
 

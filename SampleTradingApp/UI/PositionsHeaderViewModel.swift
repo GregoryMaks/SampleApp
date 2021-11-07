@@ -25,15 +25,16 @@ extension PositionsHeaderViewModel {
     }
 }
 
-extension PositionsHeaderViewModel {
+extension PositionsHeaderViewModel.ColorStyle {
 
-    static var sample: Self {
-        .init(
-            tradingSessionName: "demo0001",
-            profitAndLoss: "24,413",
-            profitAndLossColorStyle: .positive,
-            cash: "-85,521",
-            cashColorStyle: .negative
-        )
+    init(for number: Int) {
+        if number < 0 {
+            self = .negative
+        } else if number > 0 {
+            self = .positive
+        } else {
+            self = .neutral
+        }
     }
 }
+

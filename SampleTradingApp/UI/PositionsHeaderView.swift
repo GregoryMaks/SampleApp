@@ -88,28 +88,3 @@ private extension UIColor {
         }
     }
 }
-
-
-#if DEBUG
-import SwiftUI
-
-struct PositionsHeaderViewWrapper: UIViewRepresentable {
-
-    func makeUIView(context: Context) -> some UIView {
-        let viewModel = PositionsHeaderViewModel.sample
-        return PositionsHeaderView(viewModel: viewModel)
-    }
-
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-    }
-}
-
-struct PositionsHeaderViewWrapper_Previews: PreviewProvider {
-
-    static var previews: some View {
-        PositionsHeaderViewWrapper()
-.previewInterfaceOrientation(.portrait)
-    }
-}
-
-#endif // DEBUG
