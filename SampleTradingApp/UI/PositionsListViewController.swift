@@ -59,7 +59,6 @@ final class PositionsListViewController: UIViewController {
 private extension PositionsListViewController {
 
     func setupHeaderView() {
-        // TODO get from self VM
         headerView = PositionsHeaderView(viewModel: PositionsHeaderViewModel.sample)
         headerView.translatesAutoresizingMaskIntoConstraints = false
         headerView.frame = .init(origin: .zero, size: headerView.intrinsicContentSize)

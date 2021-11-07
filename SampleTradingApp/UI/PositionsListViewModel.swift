@@ -9,7 +9,6 @@ import Foundation
 
 class PositionsListViewModel {
 
-    let session: Session
     let positions: [Position]
 
     private let positionsService: PositionsServiceProtocol
@@ -17,7 +16,6 @@ class PositionsListViewModel {
     init(positionsService: PositionsServiceProtocol) {
         self.positionsService = positionsService
 
-        session = .sample
         positions = positionsService.allPositions().map {
             .init($0)
         }
@@ -25,12 +23,6 @@ class PositionsListViewModel {
 }
 
 extension PositionsListViewModel {
-
-    struct Session {
-        let name: String
-        let profitAndLoss: String
-        let cash: String
-    }
 
     struct Position {
         let marketDescription: String
@@ -46,13 +38,6 @@ extension PositionsListViewModel {
         case positive
         case neutral
         case negative
-    }
-}
-
-extension PositionsListViewModel.Session {
-
-    static var sample: Self {
-        .init(name: "demo0001", profitAndLoss: "24,413", cash: "-84,521")
     }
 }
 
