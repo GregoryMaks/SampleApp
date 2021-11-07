@@ -22,6 +22,9 @@ final class PositionsViewController: UIViewController {
 
     override var navigationItem: UINavigationItem {
         let item = UINavigationItem(title: "positionList.header".localized)
+        item.leftBarButtonItem = UIBarButtonItem(
+            customView: UIImageView(image: .init(named: "t4icon"))
+        )
         item.rightBarButtonItem = UIBarButtonItem(
             image: .init(systemName: "line.3.horizontal"),
             style: .plain,
@@ -42,21 +45,12 @@ final class PositionsViewController: UIViewController {
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        // TODO sample remove
-        self.viewModel = PositionsListViewModel(
-            session: .init(name: "demo0001", profitAndLoss: "1000", cash: "2200"),
-            positions: [
-                .init(marketDescription: "ZC DEC21", netWorth: "6", profitAndLoss: "5436", buyAndSell: "6-0", workingBuyAndSell: "0-0"),
-                .init(marketDescription: "10Y OCT21", netWorth: "0", profitAndLoss: "2131", buyAndSell: "0-0", workingBuyAndSell: "1-0"),
-                .init(marketDescription: "2YY OCT21", netWorth: "0", profitAndLoss: "12", buyAndSell: "7-3", workingBuyAndSell: "0-2"),
-                .init(marketDescription: "5YY OCT 21", netWorth: "0", profitAndLoss: "0", buyAndSell: "56-34", workingBuyAndSell: "3-3")
-            ]
-        )
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .white
         setupHeaderView()
         setupTableView()
     }
@@ -74,7 +68,7 @@ private extension PositionsViewController {
         NSLayoutConstraint.activate([
             headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            headerView.topAnchor.constraint(equalTo: view.topAnchor)
+            headerView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor)
         ])
     }
 
