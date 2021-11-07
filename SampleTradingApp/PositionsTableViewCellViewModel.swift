@@ -7,16 +7,7 @@
 
 import Foundation
 
-protocol PositionsTableViewCellViewModelProtocol {
-
-    var marketDescription: String { get }
-    var netWorth: String { get }
-    var profitAndLoss: String { get }
-    var buyAndSell: String { get }
-    var workingBuyAndSell: String { get }
-}
-
-struct PositionsTableViewCellViewModel: PositionsTableViewCellViewModelProtocol {
+struct PositionsTableViewCellViewModel {
 
     let marketDescription: String
     let netWorth: String

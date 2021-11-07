@@ -22,6 +22,7 @@
 		93915B96273842F700DE8AB1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93915B95273842F700DE8AB1 /* Localizable.strings */; };
 		93915B982738479800DE8AB1 /* PositionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B972738479800DE8AB1 /* PositionsTableViewCell.swift */; };
 		93915B9A273847B900DE8AB1 /* PositionsTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B99273847B900DE8AB1 /* PositionsTableViewCellViewModel.swift */; };
+		93915B9C27384F8800DE8AB1 /* PositionsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93915B9B27384F8800DE8AB1 /* PositionsListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		93915B95273842F700DE8AB1 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		93915B972738479800DE8AB1 /* PositionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsTableViewCell.swift; sourceTree = "<group>"; };
 		93915B99273847B900DE8AB1 /* PositionsTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		93915B9B27384F8800DE8AB1 /* PositionsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				93915B82273839D100DE8AB1 /* PositionsHeaderViewModel.swift */,
 				93915B972738479800DE8AB1 /* PositionsTableViewCell.swift */,
 				93915B99273847B900DE8AB1 /* PositionsTableViewCellViewModel.swift */,
+				93915B9B27384F8800DE8AB1 /* PositionsListViewModel.swift */,
 				93915B95273842F700DE8AB1 /* Localizable.strings */,
 			);
 			path = SampleTradingApp;
@@ -287,6 +290,7 @@
 			files = (
 				93915B81273839B200DE8AB1 /* PositionsHeaderView.swift in Sources */,
 				93915B552738339800DE8AB1 /* PositionsViewController.swift in Sources */,
+				93915B9C27384F8800DE8AB1 /* PositionsListViewModel.swift in Sources */,
 				93915B942738410400DE8AB1 /* Localization.swift in Sources */,
 				93915B512738339800DE8AB1 /* AppDelegate.swift in Sources */,
 				93915B982738479800DE8AB1 /* PositionsTableViewCell.swift in Sources */,

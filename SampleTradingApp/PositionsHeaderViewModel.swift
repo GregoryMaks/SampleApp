@@ -7,14 +7,7 @@
 
 import Foundation
 
-protocol PositionsHeaderViewModelProtocol {
-
-    var tradingSessionName: String { get }
-    var profitAndLoss: String { get }
-    var cash: String { get }
-}
-
-struct PositionsHeaderViewModel: PositionsHeaderViewModelProtocol {
+struct PositionsHeaderViewModel {
 
     let tradingSessionName: String
     let profitAndLoss: String

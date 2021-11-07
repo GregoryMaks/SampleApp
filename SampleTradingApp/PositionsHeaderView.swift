@@ -9,7 +9,7 @@ import UIKit
 
 final class PositionsHeaderView: UIView {
 
-    let viewModel: PositionsHeaderViewModelProtocol
+    let viewModel: PositionsHeaderViewModel
 
     private var titleLabel: UILabel!
 
@@ -17,7 +17,7 @@ final class PositionsHeaderView: UIView {
     private var profitAndLossLabel: UILabel!
     private var cashLabel: UILabel!
 
-    init(viewModel: PositionsHeaderViewModelProtocol) {
+    init(viewModel: PositionsHeaderViewModel) {
         self.viewModel = viewModel
         super.init(frame: .zero)
         setupContent()

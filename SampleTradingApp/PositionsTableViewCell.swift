@@ -9,7 +9,7 @@ import UIKit
 
 final class PositionsTableViewCell: UITableViewCell {
 
-    var viewModel: PositionsTableViewCellViewModelProtocol? {
+    var viewModel: PositionsTableViewCellViewModel? {
         didSet {
             updateContent()
         }
@@ -22,6 +22,11 @@ final class PositionsTableViewCell: UITableViewCell {
     private var profitAndLossLabel: UILabel!
     private var buyAndSellLabel: UILabel!
     private var workingBuyAndSellLabel: UILabel!
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupContent()
+    }
 
     init() {
         super.init(style: .default, reuseIdentifier: nil)
@@ -92,7 +97,7 @@ import SwiftUI
 
 struct PositionsTableViewCellWrapper: UIViewRepresentable {
 
-    let viewModel: PositionsTableViewCellViewModelProtocol
+    let viewModel: PositionsTableViewCellViewModel
 
     func makeUIView(context: Context) -> some UIView {
         let cell = PositionsTableViewCell()
@@ -106,7 +111,7 @@ struct PositionsTableViewCellWrapper: UIViewRepresentable {
 
 struct PositionsTableViewCell_Previews: PreviewProvider {
 
-    static let viewModels: [PositionsTableViewCellViewModelProtocol] = [
+    static let viewModels: [PositionsTableViewCellViewModel] = [
         PositionsTableViewCellViewModel(marketDescription: "ZC DEC21", netWorth: "6", profitAndLoss: "5,588", buyAndSell: "6-0", workingBuyAndSell: "0-0")
     ]
 
