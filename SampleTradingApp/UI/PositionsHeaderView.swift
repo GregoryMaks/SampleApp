@@ -9,7 +9,9 @@ import UIKit
 
 final class PositionsHeaderView: UIView {
 
-    let viewModel: PositionsHeaderViewModel
+    var viewModel: PositionsHeaderViewModel? {
+        didSet { updateContent() }
+    }
 
     private var titleLabel: UILabel!
 
@@ -18,8 +20,8 @@ final class PositionsHeaderView: UIView {
     private var cashLabel: UILabel!
 
     init(viewModel: PositionsHeaderViewModel) {
-        self.viewModel = viewModel
         super.init(frame: .zero)
+        self.viewModel = viewModel
         setupContent()
     }
 
@@ -67,11 +69,11 @@ private extension PositionsHeaderView {
     }
 
     private func updateContent() {
-        titleLabel.text = viewModel.tradingSessionName
-        profitAndLossLabel.text = "\("positionsHeader.profitAndLossLabel".localized) \(viewModel.profitAndLoss)"
-        profitAndLossLabel.textColor = .color(for: viewModel.profitAndLossColorStyle)
-        cashLabel.text = "\("positionsHeader.cashLabel".localized) \(viewModel.cash)"
-        cashLabel.textColor = .color(for: viewModel.cashColorStyle)
+        titleLabel.text = viewModel?.tradingSessionName
+        profitAndLossLabel.text = "\("positionsHeader.profitAndLossLabel".localized) \(viewModel?.profitAndLoss ?? "")"
+        profitAndLossLabel.textColor = .color(for: viewModel?.profitAndLossColorStyle ?? .neutral)
+        cashLabel.text = "\("positionsHeader.cashLabel".localized) \(viewModel?.cash ?? "")"
+        cashLabel.textColor = .color(for: viewModel?.cashColorStyle ?? .neutral)
     }
 }
 

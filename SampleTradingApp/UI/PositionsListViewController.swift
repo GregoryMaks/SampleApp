@@ -93,6 +93,7 @@ private extension PositionsListViewController {
     }
 
     func updateContent() {
+        headerView.viewModel = viewModel?.headerViewModel
         tableView.reloadData()
     }
 }
